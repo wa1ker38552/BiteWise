@@ -156,3 +156,38 @@ a {
 .team-card .horizontal-container {
     gap: 1rem;
 }
+
+.faq-open {
+    height: auto !important;
+}
+
+.faq-item {
+    position: relative;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 100%;
+    border: solid 1px var(--accent-transparent);
+    background: var(--accent-very-transparent);
+    height: 3.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    color: var(--accent);
+}
+
+.faq-open .down-icon {
+    transform: rotate(180deg);
+}
+
+.down-icon {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    filter: brightness(0) invert(60%) sepia(75%) saturate(370%) hue-rotate(71deg) brightness(97%) contrast(101%);
+}
