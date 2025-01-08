@@ -1,3 +1,5 @@
 :root {
     --accent: #52d152 !important;
+    --accent-transparent: #52d1522c;
+    --accent-very-transparent: #52d1520e;
 }

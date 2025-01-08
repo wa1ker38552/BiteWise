@@ -61,7 +61,6 @@ a:hover {
 button img {
     width: 2rem;
     height: 2rem;
-    filter: grayscale(1) opacity(0.5);
 }
 
 button .horizontal-container {
@@ -126,4 +125,34 @@ button .horizontal-container {
 
 a {
     text-decoration: none;
+}
+
+.team-card {
+    border: solid 1px var(--accent-transparent);
+    border-radius: 5px;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--accent-very-transparent);
+}
+
+.team-card img:not(.social-icon) {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    border: solid 15px var(--accent-transparent);
+}
+
+.team-card h2 {
+    color: var(--accent);
+}
+
+.social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.team-card .horizontal-container {
+    gap: 1rem;
 }
