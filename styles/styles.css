@@ -191,3 +191,31 @@ a {
     top: 1rem;
     filter: brightness(0) invert(60%) sepia(75%) saturate(370%) hue-rotate(71deg) brightness(97%) contrast(101%);
 }
+
+.youtube-video {
+    border: solid 1px red;
+    background: rgba(255, 0, 0, 0.19);
+    color: red;
+    padding: 0.5rem 1.5rem;
+    width: 8rem;
+}
+
+.youtube-video:hover {
+    background: rgba(255, 0, 0, 0.083);
+}
+
+#demoImage {
+    height: 70vh;
+    border: solid 1px var(--accent);
+    border-radius: 5px;
+}
+
+.demo-container {
+    gap: 2rem;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+}

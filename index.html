@@ -9,6 +9,7 @@
         <link rel=stylesheet href="https://lib.cadenchau.com/styles/minimalistic.css">
         <link rel=stylesheet href="styles/globals.css">
         <link rel=stylesheet href="styles/styles.css">
+        <script src="https://lib.cadenchau.com/lib.js"></script>
     </head>
     <body>
         <div class="navigation horizontal-container">
@@ -19,6 +20,7 @@
             <div class="navigation-right horizontal-container">
                 <a href="#about">About</a>
                 <a href="#team">Team</a>
+                <a href="#model">Model</a>
                 <a href="#faq">FAQ</a>
             </div>
         </div>
@@ -31,7 +33,7 @@
                                 <div style="z-index: 2;">
                                     <h1>Nutrition <span class="accent">Reimagined</span></h1>
                                     <h2><i>One <span class="accent">byte</span> at a time</i></h2>
-                                    <h4 style="font-weight: 400">An app designed so you can easily scan your food to view nutrifition facts directly from the USDA</h4>
+                                    <h4 style="font-weight: 400">An app designed so you can easily scan your food to view nutrition facts directly from the USDA</h4>
                                     <div class="gap"></div>
                                     <div class="horizontal-container" style="gap: 1rem;">
                                         <button class="primary-button-solid horizontal-container"><img src="assets/icon_apple.png" style="filter: invert(1);">App Store</button>
@@ -101,27 +103,70 @@
                             </div>
                         </div>
                     </div>
+                    <div class="page centered-children" id="model" style="flex-direction: column;">
+                        <div>
+                            <div class="centered-children">
+                                <button class="primary-button youtube-video horizontal-container" onclick="window.open('https://www.youtube.com/watch?v=CCr66efbgFc', '_blank')"><img src="assets/icon_youtube.png" style="width: 2rem; height: auto">Video</button>
+                            </div>
+                            <div class="break"></div>
+                            <div class="demo-container centered-vertically">
+                                <button class="carousel-btn left" onclick="goLeft()">&#10094;</button>
+                                <img id="demoImage" src="assets/screenshots/s7.png">
+                                <button class="carousel-btn right" onclick="goRight()">&#10095;</button>
+                            </div>
+                            <script>
+                                var current = 7
+                                var demoImage
+
+                                function goLeft() {
+                                    if (current == 7) {
+                                        current = 1
+                                    } else {
+                                        current++
+                                    }
+                                    update()
+                                }
+
+                                function goRight() {
+                                    if (current == 1) {
+                                        current = 7
+                                    } else {
+                                        current--
+                                    }
+                                    update()
+                                }
+
+                                function update() {
+                                    dquery("#demoImage").src = `assets/screenshots/s${current}.png`
+                                }
+
+                                window.onload = function() {
+                                    demoImage = dquery("#demoImage")
+                                }
+                            </script>
+                        </div>
+                    </div>
                     <div class="page centered-children" id="faq" style="flex-direction: column;">
                         <h1>Frequently Asked <span class="accent">Questions</span></h1>
                         <div class="break"></div>
                         <div class="break"></div>
                         <div>
                             <div class="faq-item">
-                                <h3>faq question #1</h3>
+                                <h3>Where is the data coming from?</h3>
                                 <div class="break"></div>
-                                <h4>the answer to the question is blah blah blah test test test blah blah blah test test test blah blah blah test test test blah blah blah test test test</h4>
+                                <h4>Most of our data is sourced from the USDA food database. We also obtain additional sources to train the model from other food databases.</h4>
                                 <img class="down-icon" src="assets/icon_down.svg" onclick="(this.parentElement.classList.contains('faq-open')) ? this.parentElement.classList.remove('faq-open') : this.parentElement.classList.add('faq-open')">
                             </div>
                             <div class="faq-item">
-                                <h3>faq question #2</h3>
+                                <h3>Do you store video footage that the app scans?</h3>
                                 <div class="break"></div>
-                                <h4>the answer to the question is blah blah blah test test test blah blah blah test test test blah blah blah test test test blah blah blah test test test</h4>
+                                <h4>We do not store or use any of the footage that your app scans after it's been analyzed and shown to you.</h4>
                                 <img class="down-icon" src="assets/icon_down.svg" onclick="(this.parentElement.classList.contains('faq-open')) ? this.parentElement.classList.remove('faq-open') : this.parentElement.classList.add('faq-open')">
                             </div>
                             <div class="faq-item">
-                                <h3>faq question #3</h3>
+                                <h3>Do I need to pay to use the app?</h3>
                                 <div class="break"></div>
-                                <h4>the answer to the question is blah blah blah test test test blah blah blah test test test blah blah blah test test test blah blah blah test test test</h4>
+                                <h4>A majority of the features on our app does not require a subscription to use. However, we do offer a premium subscription that unlocks access to more features.</h4>
                                 <img class="down-icon" src="assets/icon_down.svg" onclick="(this.parentElement.classList.contains('faq-open')) ? this.parentElement.classList.remove('faq-open') : this.parentElement.classList.add('faq-open')">
                             </div>
                         </div>
